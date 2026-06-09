@@ -7,9 +7,8 @@ import java.util.List;
 
 public record BookingEvent(
 
-        Long bookingId,
-        Long customerId,
-        Long barberId,
+        String customerName,
+        String customerEmail,
         LocalDateTime startTime,
         LocalDateTime endTime,
         List<ServicesDto> services,
