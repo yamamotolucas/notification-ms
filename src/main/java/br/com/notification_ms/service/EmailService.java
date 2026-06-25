@@ -47,6 +47,7 @@ public class EmailService {
                         "Seu agendamento foi pré-reservado com sucesso. Estamos quase lá!\n\n" +
                         "📌 Detalhes do Agendamento:\n" +
                         "• Serviços: %s\n" +
+                        "• Barbeiro: %s\n" +
                         "• Horário de Início: %s\n" +
                         "• Horário de Término: %s\n" +
                         "• Valor Total: R$ %s\n\n" +
@@ -56,12 +57,12 @@ public class EmailService {
                         "Te esperamos lá! 💈",
                 dto.customerName(),
                 formattedServices,
+                dto.barberName(),
                 dto.startTime().format(formatter),
                 dto.endTime().format(formatter),
                 totalPrice,
                 dto.confirmationToken()
         );
-
         message.setText(body);
         mailSender.send(message);
     }

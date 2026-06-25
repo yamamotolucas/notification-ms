@@ -9,6 +9,7 @@ public record BookingEvent(
 
         String customerName,
         String customerEmail,
+        String barberName,
         LocalDateTime startTime,
         LocalDateTime endTime,
         List<ServicesDto> services,
