@@ -18,10 +18,6 @@ import java.util.stream.Collectors;
 public class EmailService {
 
     private final JavaMailSender mailSender;
-
-    @Value("${my.email}")
-    private String emailFrom;
-
     public EmailService(JavaMailSender mailSender) {
         this.mailSender = mailSender;
     }
